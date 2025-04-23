@@ -62,7 +62,7 @@ st.markdown("""
 
 <div style='text-align: center; color: grey; font-size: 14px;'>
     Made by:<br/>
-    <b>HARI NARAYANA RATH</b> – <code>AP22110010601</code> <br/>
+    <b>Hari Narayana Rath</b> – <code>AP22110010601</code> <br/>
     <b>Pranav S Krishnan</b> – <code>AP22110010653</code><br/>
     <b>Christo</b> – <code>AP22110010399</code><br/>
     <b>Sri Ram</b> – <code>AP22110010509</code><br/>
