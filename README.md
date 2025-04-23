@@ -63,7 +63,7 @@ streamlit run app.py
 ```
 
 ### 👥 Authors & Acknowledgments
-HARI NARAYANA RATH – AP22110010601
+Hari Narayana Rath – AP22110010601
 
 Pranav S Krishnan – AP22110010653
 
