@@ -19,6 +19,11 @@ An interactive web application that simulates a miner traversing an \(n \times m
 ## 🧠 Algorithms & Methodology
 
 ### 1. Propositional Logic Mapping
+-State Representation: Each state in the DP can be mapped to a logical variable that represents the status of the gold mine at that point, such as whether a cell is empty, contains gold, or is visited. The state transition depends on actions like moving between cells or collecting gold.
+
+-Action Constraints: Propositional logic can be used to define valid actions at each state. For instance, you can use logical operators to enforce constraints on the agent’s movements—such as only being able to move to adjacent cells or collect gold if there is any available in the current state.
+
+-Goal Condition: The final goal in the DP problem (maximizing gold collection) can be defined as a propositional formula representing the desired end state. This might include conditions like having reached a specific location or collected a certain amount of gold, which can be checked through propositional logic expressions.
 ### 2. Dynamic Programming Solver
 - **Initialization**: In the last column `j = m-1`, set `dp[i][m-1] = gold[i][m-1]` for each row \(i\).  
 - **Backward Fill**: Iterate columns from right to left, computing `dp[i][j]` via the above recurrence.  
