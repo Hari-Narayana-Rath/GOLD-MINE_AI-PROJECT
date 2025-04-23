@@ -53,5 +53,19 @@ if gold:
         st.subheader("🧭 Step-by-step Moves:")
         for idx, (r, c) in enumerate(final_path):
             st.write(f"Step {idx+1}: Move to cell ({r}, {c}) → {gold[r][c]} gold")
-            
+
         st.success(f"🎯 Maximum gold collected: **{max_gold} tons**")
+
+# ─── Footer ────────────────────────────────────────────────────────
+st.markdown("""
+<hr style="border:1px solid #ccc"/>
+
+<div style='text-align: center; color: grey; font-size: 14px;'>
+    Made by:<br/>
+    <b>HARI NARAYANA RATH</b> – <code>AP22110010601</code> <br/>
+    <b>Pranav S Krishnan</b> – <code>AP22110010653</code><br/>
+    <b>Christo</b> – <code>AP22110010399</code><br/>
+    <b>Sri Ram</b> – <code>AP22110010509</code><br/>
+    <b>Y J Linus</b> – <code>AP22110010619</code><br/>
+</div>
+""", unsafe_allow_html=True)
