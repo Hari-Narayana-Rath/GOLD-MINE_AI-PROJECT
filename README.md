@@ -6,26 +6,6 @@ An interactive web application that simulates a miner traversing an \(n \times m
 
 ---
 
-## 📋 Table of Contents
-
-- [Features](#features)  
-- [Algorithms & Methodology](#algorithms--methodology)  
-  - [1. Propositional Logic Mapping](#1-propositional-logic-mapping)  
-  - [2. Dynamic Programming Solver](#2-dynamic-programming-solver)  
-  - [3. Path Reconstruction & Visualization](#3-path-reconstruction--visualization)  
-- [Tech Stack](#tech-stack)  
-- [Repository Structure](#repository-structure)  
-- [Getting Started](#getting-started)  
-  - [Clone the Repo](#clone-the-repo)  
-  - [Install Dependencies](#install-dependencies)  
-  - [Run Locally](#run-locally)  
-- [Deploying Your Own Instance](#deploying-your-own-instance)  
-- [Contributing](#contributing)  
-- [Authors & Acknowledgments](#authors--acknowledgments)  
-- [License](#license)  
-
----
-
 ## 🚀 Features
 
 - **Interactive Grid Input**: Enter your gold-mine matrix manually or upload a JSON file.  
@@ -39,20 +19,7 @@ An interactive web application that simulates a miner traversing an \(n \times m
 ## 🧠 Algorithms & Methodology
 
 ### 1. Propositional Logic Mapping
-
-We treat each grid position \((i,j)\) as a logical proposition \(P_{i,j}\). From any position, the miner may move to one of three positions in the next column:
-
-\[
-P_{i,j} \;\longrightarrow\; 
-\bigl\{P_{i,j+1},\; P_{i-1,j+1},\; P_{i+1,j+1}\bigr\}
-\]
-
-This mapping enforces the movement constraints (right, diagonally up/right, diagonally down/right) in a clear, rule-based form.
-
 ### 2. Dynamic Programming Solver
-
-We construct a 2D table `dp` of the same dimensions as the grid. The recurrence is:
-
 \[
 dp[i][j] = \;gold[i][j]\;+\;\max
 \begin{cases}
@@ -61,13 +28,10 @@ dp[i-1][j+1]\quad(\text{if }i>0),\\
 dp[i+1][j+1]\quad(\text{if }i<n-1)
 \end{cases}
 \]
-
 - **Initialization**: In the last column `j = m-1`, set `dp[i][m-1] = gold[i][m-1]` for each row \(i\).  
 - **Backward Fill**: Iterate columns from right to left, computing `dp[i][j]` via the above recurrence.  
 - **Result**: The maximum gold collectible is \(\max_i \, dp[i][0]\).
-
 This guarantees \(O(n \times m)\) time complexity and \(O(n \times m)\) space.
-
 ### 3. Path Reconstruction & Visualization
 
 - While filling `dp`, we also track a `path` array storing, for each \((i,j)\), the next cell that leads to that maximum.  
