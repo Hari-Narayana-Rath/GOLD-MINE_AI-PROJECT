@@ -43,8 +43,6 @@ This guarantees \(O(n \times m)\) time complexity and \(O(n \times m)\) space.
 - **Streamlit** – for the web interface  
 - **NumPy** – efficient numeric operations  
 - **Pandas** – DataFrame displays of the grid and DP table  
-- **LaTeX** – documentation (in `report/`)  
-
 ---
 
 ### Clone the Repo
