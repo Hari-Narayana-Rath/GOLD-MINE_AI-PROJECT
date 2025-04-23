@@ -20,14 +20,6 @@ An interactive web application that simulates a miner traversing an \(n \times m
 
 ### 1. Propositional Logic Mapping
 ### 2. Dynamic Programming Solver
-\[
-dp[i][j] = \;gold[i][j]\;+\;\max
-\begin{cases}
-dp[i][j+1],\\
-dp[i-1][j+1]\quad(\text{if }i>0),\\
-dp[i+1][j+1]\quad(\text{if }i<n-1)
-\end{cases}
-\]
 - **Initialization**: In the last column `j = m-1`, set `dp[i][m-1] = gold[i][m-1]` for each row \(i\).  
 - **Backward Fill**: Iterate columns from right to left, computing `dp[i][j]` via the above recurrence.  
 - **Result**: The maximum gold collectible is \(\max_i \, dp[i][0]\).
